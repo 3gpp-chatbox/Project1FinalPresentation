@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 1: Company-Oriented Project Development</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <a href="#home">Home</a>
+            <a href="#overview">Overview</a>
+            <a href="#timeline">Timeline</a>
+            <a href="#features">Features</a>
+            <a href="#methodology">Methodology</a>
+            <a href="#conclusion">Conclusion</a>
+            <a href="#results">Results</a>
+            <a href="#team">Team</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>3GPP AI Assistant</h1>
+            <p>Phase 1: Final Presentation</p>
+            <a href="#overview" class="cta-button">Learn More</a>
+        </div>
+    </section>
+
+    <section id="overview" class="content-section">
+        <h2>Project Overview</h2>
+        <div class="overview-description">
+            <p>The project aimed to develop a Minimum Viable Product (MVP) that leverages Large Language Models (LLM) to extract and visualize state machines from 3GPP technical specifications.</p>
+        </div>
+        <div class="card-container two-column">
+            <div class="card">
+                <i class="fas fa-code-branch"></i>
+                <h3>Procedure Selection</h3>
+                <p>Interactive browsing and selection of network procedures from 3GPP specifications</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-project-diagram"></i>
+                <h3>Flow Diagram Generation</h3>
+                <p>Automatic conversion of JSON procedure data into Mermaid.js flow diagrams</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-code"></i>
+                <h3>JSON Data Viewer</h3>
+                <p>Raw procedure data visualization for detailed technical analysis</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-desktop"></i>
+                <h3>Dynamic Visualization</h3>
+                <p>Interactive and responsive UI for enhanced user experience</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="content-section">
+        <h2>Key Features</h2>
+        <div class="feature-grid">
+            <div class="feature-item large">
+                <i class="fas fa-code-branch"></i>
+                <h3>Procedural Model Extraction</h3>
+                <ul class="feature-list">
+                    <li><strong>States:</strong> EMM-REGISTERED</li>
+                    <li><strong>Actions:</strong> Attach Request, Identity Response</li>
+                    <li><strong>Events:</strong> UE initiates Attach</li>
+                    <li><strong>Parameters:</strong> IMSI, GUTI</li>
+                    <li><strong>Conditionals:</strong> "If GUTI is unknown..."</li>
+                    <li><strong>Metadata:</strong> Procedure name, section number</li>
+                </ul>
+            </div>
+            <div class="feature-item large">
+                <i class="fas fa-project-diagram"></i>
+                <h3>Flow Property Graph Construction</h3>
+                <ul class="feature-list">
+                    <li><strong>Nodes:</strong> States and Events</li>
+                    <li><strong>Edges:</strong> Actions and Transitions</li>
+                    <li><strong>Properties:</strong> Parameters, Conditionals, Metadata</li>
+                </ul>
+            </div>
+            <div class="feature-item large">
+                <i class="fas fa-chart-network"></i>
+                <h3>Visualization & Interaction</h3>
+                <ul class="feature-list">
+                    <li><strong>Graph Rendering:</strong> Display the extracted knowledge graph</li>
+                    <li><strong>Mermaid Integration:</strong> Generate a Mermaid code based diagram for a structured procedural view</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="timeline" class="content-section">
+        <h2>Project Timeline</h2>
+        <div class="timeline-container">
+            <img 
+                src="projecttimeline.png" 
+                alt="Project Timeline" 
+                class="timeline-image"
+                onerror="this.onerror=null; this.src='images/projecttimeline.png';"
+            >
+        </div>
+    </section>
+
+    <section id="methodology" class="content-section">
+        <h2>Methodology and Approach</h2>
+        <div class="methodology-grid">
+            <div class="methodology-item">
+                <h3>Research Methodology</h3>
+                <ul class="methodology-list">
+                    <li><i class="fas fa-book"></i>
+                        <span>Focused on extracting NAS (Non-Access Stratum) procedures for 5G NR from 3GPP TS 24.501</span>
+                    </li>
+                    <li><i class="fas fa-tasks"></i>
+                        <span>Selected Initial Registration and Periodic Registration update as key procedures for analysis</span>
+                    </li>
+                    <li><i class="fas fa-calendar-alt"></i>
+                        <span>Used the latest version of the document (TS 24.501 v19.1.1, December 2024)</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="methodology-item">
+                <h3>System Architecture & Implementation</h3>
+                <div class="architecture-container">
+                    <div class="arch-component">
+                        <h4><i class="fas fa-server"></i> Backend (FastAPI - Python)</h4>
+                        <p>Developed APIs to serve procedure data from structured JSON</p>
+                    </div>
+                    <div class="arch-component">
+                        <h4><i class="fas fa-desktop"></i> Frontend (React.js)</h4>
+                        <ul>
+                            <li>Procedure Selection List (NAS procedures: Initial & Periodic Registration)</li>
+                            <li>JSON Viewer to inspect raw procedure data</li>
+                            <li>Mermaid.js Diagrams to visualize NAS signaling flows dynamically</li>
+                        </ul>
+                    </div>
+                    <div class="arch-component">
+                        <h4><i class="fas fa-network-wired"></i> API Endpoints</h4>
+                        <ul>
+                            <li>Listing available result sets and procedures</li>
+                            <li>Fetching detailed NAS procedure graphs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="methodology-item">
+                <h3>Approach 1: TOC Guided Retrieval</h3>
+                <div class="approach-content">
+                    <div class="approach-image">
+                        <img 
+                            src="./images/method1.png" 
+                            alt="TOC guided retrieval and structures extraction" 
+                            class="method-image"
+                            onerror="if(this.src.includes('images')){this.src='method1.png'}else{this.style.backgroundColor='#eee'; this.style.padding='20px'; this.alt='Method 1 image failed to load'}"
+                        >
+                    </div>
+                    <p class="approach-description">TOC guided retrieval and structures extraction methodology</p>
+                    <div class="button-container">
+                        <button class="query-button" onclick="toggleQuery('prompt1-a1', this)">Show Prompt 1</button>
+                        <button class="query-button" onclick="toggleQuery('prompt2-a1', this)">Show Prompt 2</button>
+                        <button class="query-button" onclick="toggleQuery('json1-a1', this)">Show JSON output (Initial Registration)</button>
+                        <button class="query-button" onclick="toggleQuery('json2-a1', this)">Show JSON output (Periodic Registration)</button>
+                    </div>
+                    <div id="prompt1-a1" class="query-container" style="display: none;">
+                        <pre class="query-text"></pre>
+                    </div>
+                    <div id="prompt2-a1" class="query-container" style="display: none;">
+                        <pre class="query-text"></pre>
+                    </div>
+                    <div id="json1-a1" class="query-container" style="display: none;">
+                        <pre class="query-text"></pre>
+                    </div>
+                    <div id="json2-a1" class="query-container" style="display: none;">
+                        <pre class="query-text"></pre>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="methodology-item">
+                <h3>Approach 2: RAG Based Retrieval</h3>
+                <div class="approach-content">
+                    <div class="approach-image">
+                        <img 
+                            src="./images/method2.png" 
+                            alt="Embedding based retrieval and graph construction" 
+                            class="method-image"
+                            onerror="if(this.src.includes('images')){this.src='method2.png'}else{this.style.backgroundColor='#eee'; this.style.padding='20px'; this.alt='Method 2 image failed to load'}"
+                        >
+                    </div>
+                    <p class="approach-description">Embedding based retrieval and graph construction (RAG based)</p>
+                    <div class="button-container">
+                        <button class="query-button" onclick="toggleQuery('prompt1-a2', this)">Show Prompt 1</button>
+                        <button class="query-button" onclick="toggleQuery('prompt2-a2', this)">Show Prompt 2</button>
+                        <button class="query-button" onclick="toggleQuery('json1-a2', this)">Show JSON output (Initial Registration)</button>
+                        <button class="query-button" onclick="toggleQuery('json2-a2', this)">Show JSON output (Periodic Registration)</button>
+                    </div>
+                    <div id="prompt1-a2" class="query-container" style="display: none;">
+                        <pre class="query-text"></pre>
+                    </div>
+                    <div id="prompt2-a2" class="query-container" style="display: none;">
+                        <pre class="query-text"></pre>
+                    </div>
+                    <div id="json1-a2" class="query-container" style="display: none;">
+                        <pre class="query-text"></pre>
+                    </div>
+                    <div id="json2-a2" class="query-container" style="display: none;">
+                        <pre class="query-text"></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="conclusion" class="content-section">
+        <h2>Conclusion</h2>
+        <div class="conclusion-grid">
+            <div class="conclusion-item">
+                <h3><i class="fas fa-trophy"></i> Summary of Achievements</h3>
+                <ul class="conclusion-list">
+                    <li>Developed Two Extraction Approaches</li>
+                    <li>Designed an Interactive Spec Viewer</li>
+                </ul>
+            </div>
+            
+            <div class="conclusion-item">
+                <h3><i class="fas fa-lightbulb"></i> What We Learned</h3>
+                <ul class="conclusion-list">
+                    <li>Efficient LLM prompt engineering techniques</li>
+                    <li>AI based text retrieval and graph structuring</li>
+                    <li>Experimenting with two Information Extraction Approaches</li>
+                </ul>
+            </div>
+            
+            <div class="conclusion-item">
+                <h3><i class="fas fa-exclamation-triangle"></i> Key Challenges</h3>
+                <ul class="conclusion-list">
+                    <li>Identify the main requirement correctly and select the suitable approach to solve the problem</li>
+                    <li>Determine the scope limits of project</li>
+                    <li>Validation of extracted data</li>
+                    <li class="sub-challenge">
+                        <strong>ToC guided retrieval challenges:</strong>
+                        <p>Important details scattered across different sections and ToC might not align with the required procedure details.</p>
+                    </li>
+                    <li class="sub-challenge">
+                        <strong>Embedding based retrieval challenges:</strong>
+                        <p>While retrieving data, data splitted into chunks for embeddings, this can result in the loss of context.</p>
+                        <p>Vector embeddings only measure the similarity between pieces of data, lacking contextual information about their relationships.</p>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="conclusion-item">
+                <h3><i class="fas fa-forward"></i> Future Work</h3>
+                <p class="future-work-placeholder">How could this be improved?</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="results" class="content-section">
+        <h2>Project Results</h2>
+        <div class="results-container">
+            <div class="result-item">
+                <h3>99.9%</h3>
+                <p>Uptime Achieved</p>
+            </div>
+            <div class="result-item">
+                <h3>50%</h3>
+                <p>Latency Reduction</p>
+            </div>
+            <div class="result-item">
+                <h3>2x</h3>
+                <p>Performance Increase</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="content-section">
+        <h2>Our Team</h2>
+        <div class="team-container">
+            <div class="team-member">
+                <h3>Lea Hampinen</h3>
+            </div>
+            <div class="team-member">
+                <h3>Matheus Ferreira Oliveira</h3>
+            </div>
+            <div class="team-member">
+                <h3>Wadu Mesthri Suchani Shehara</h3>
+            </div>
+            <div class="team-member">
+                <h3>Shujuan Xu</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="content-section">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <i class="fas fa-envelope"></i>
+                <p>contact@telecom.com</p>
+            </div>
+            <div class="contact-info">
+                <i class="fas fa-phone"></i>
+                <p>+1 (555) 123-4567</p>
+            </div>
+            <div class="contact-info">
+                <i class="fas fa-location-dot"></i>
+                <p>123 Tech Street, Silicon Valley, CA</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Telecommunications Project. All rights reserved.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html> 
