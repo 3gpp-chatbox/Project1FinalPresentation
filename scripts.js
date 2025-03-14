@@ -858,7 +858,7 @@ async function toggleQuery(containerId, buttonElement) {
         container.style.display = 'none';
         buttonElement.textContent = buttonElement.textContent.replace('Hide', 'Show');
     }
-}
+} 
 
 // Add event listener for when the page loads
 document.addEventListener('DOMContentLoaded', () => {
